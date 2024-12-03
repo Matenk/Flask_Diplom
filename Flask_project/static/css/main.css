@@ -1,0 +1,24 @@
+/*Создали цвет фона основного шаблона*/
+body{
+    background-color: white;
+}
+
+
+/*HEADER*/
+/*закрепление шапки*/
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+    background: #fff;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+/*Создали класс для иконки в основном шаблоне и изменили её размер*/
+.header__img{
+    height: 74px;
+    width: 74px;
+}
+
+/*POSTS*/

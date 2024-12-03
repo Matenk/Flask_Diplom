@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+Все записи
+{% endblock %}
+
+{% block content %}
+<h1>Записи</h1>
+
+
+<div class="card">
+  {% for post in posts %}
+  <h5 class="card-header">{{ post.id }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{ post.date }}</h5>
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.text }}</p>
+
+        <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST" style="display:inline;">
+      <input type="submit" value="Удалить" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите удалить этот пост?');">
+    </form>
+  </div><br>
+  {% endfor %}
+</div>
+
+{% endblock %}
